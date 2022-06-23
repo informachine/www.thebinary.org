@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="The Binary Organisation, Binary, Digital Rights, Internet of Beings">
@@ -9,26 +9,110 @@
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     
-	<link rel="stylesheet" type="text/css" href="./all.css?6070">
+	<link rel="stylesheet" type="text/css" href="./all.css?3836">
 	
     <title>The Binary Organisation - IO</title>
 
+	<!-- Multilingualizer -->
+	<!-- Copyright Matiogi Ltd 2016, author Dave Hilditch -->
+	<!-- License: GPL 3 -->
 
+	<script type="text/javascript" src="//cdn.thebinary.org/mlcode/jquery-3.2.1.min.js"></script>
+	<script>var mllanguages = []; mllanguages["English"] = 0; mllanguages["Greek"] = 1; 	
+	</script>
+	<script type="text/javascript" src="//cdn.thebinary.org/mlcode/multilingualizer4.36.js"></script>
+	<script>
+	var mltextblockboundary = '....';
+	var forcenonburger = true;
+	// Perf option: when this next setting is 0, the Multilingualizer will watch the HTML on page to check for changes and translate them. With some themes, e.g. with parallax, this can slow down scrolling. In those cases, you can set this to 500 and instead of observing changes to the doc, the multilingualizer will run every 500 milliseconds.
+	var recheckfrequency = 0; 
+	</script>
+	<style>
+	  #multilingualizerloadingscreen {
+	    position:fixed;
+	    width:100%;
+	      height:100%;
+	    background-color:white;
+	    background-repeat:no-repeat;
+	    background-position:center, bottom right;
+	    z-index:99999999;
+		top:0px;
+		left:0px;
+	  }
+	  #multilingualizerloadingscreen.loaded {
+	    display:none;
+	  }	
+	  #mlbranding {
+		display:none!important;
+	  }
+	</style>
+	<script> var mllanguagenames = ["English", "Ελληνικά"];
+	var mllanguagestyle = {};
+	mllanguagestyle.verticalposition = '100px'; // can be top or bottom or 10px or 100px etc
+	mllanguagestyle.horizontalposition = 'left'; // can be left, right, or 10px for 10 pixels from left or -10px for 10 pixels from the right
+	mllanguagestyle.font = 'inherit'; // will inherit the font from the body paragraph elements, or you can specify a font
+	mllanguagestyle.fontsize = 'inherit'; // inherit or you can set 12px or 15px etc
+	mllanguagestyle.backgroundcolor = '#FF0000'; // can be any color you wish
+	mllanguagestyle.fontcolor = '#ffffff'; // can be any color you wish
+	mllanguagestyle.layout = 'vertical'; // can be vertical or horizontal </script>
+	<script type="text/javascript" src="https://cdn.thebinary.org/mlcode/languageselector.js"></script>
+	<div class="languagewrapper">
+	<div class="language"><a href="#" onclick="languageClicked(0);"><img src="https://cdn.thebinary.org/images/langEN_transsmallsquare64px.png" /></a></div>
+	<div class="language"><a href="#" onclick="languageClicked(1);"><img src="https://cdn.thebinary.org/images/langEL_transsmallsquare64px.png" /></a></div>
+	</div>
+	<style>
+	.languagewrapper {
+	position:fixed;
+	bottom:23px;
+	right:60px;
+	z-index:999999;
+	background-color: transparent; 
+	padding: 2px;
+	opacity: 0.45;
+	}
+	.languagewrapper .language img {
+	height:26px;
+	}
+	.languagewrapper .language {
+	float:left;
+	}
+	.languagewrapper .language {
+	display:block;
+	}
+	.languagewrapper .language.active {
+	display:block;
+	}
+	.languagewrapper .language.active a {
+	color:white;
+	font-weight:bold;
+	}
+	.languagewrapper .language a {
+	padding:2px 5px;
+	text-decoration:none;
+	color:white;
+	}
+	</style>
     
 <!-- Analytics -->
- 
+ <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"inbox@thebinary.org",utcoffset:"3"}))};sessionStorage.setItem("_swa","1");</script>
 <!-- Analytics END -->
     
 </head>
 <body>
+
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
 <!-- Main container -->
 <div class="page-container">
     
 <!-- bloc-landing -->
-<div class="bloc bloc-fill-screen bgc-midnight-blue d-bloc " id="bloc-landing">
+<div class="bloc bloc-fill-screen bgc-midnight-blue d-bloc" id="bloc-landing">
 	<div class="video-bg-container">
-		<video class="bloc-video" preload="auto" loop="loop" muted="muted" playsinline="playsinline" autoplay="autoplay">
-			<source src="vid/data_rights_nebula_background_loop_4T2Q86J_1080p.mp4" type="video/mp4" />
+		<video class="bloc-video lazyload" preload="auto" loop="loop" muted="muted" playsinline="playsinline" autoplay="autoplay" data-src="vid/data_rights_nebula_background_loop_4T2Q86J_1080p.mp4">
+			<source src="img/lazyload-ph.png" data-src="vid/data_rights_nebula_background_loop_4T2Q86J_1080p.mp4" type="video/mp4" />
 		</video>
 	</div>
 	<div class="bloc-shape-divider bloc-divider-bottom bloc-divider-flip-x">
@@ -39,7 +123,7 @@
 				<div class="col-12">
 					<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
 						<div class="container-fluid">
-							<a class="navbar-brand" href="./"><img src="img/IOlogomonochromeFFFFFFxxsmall.png" alt="logo" /></a>
+							<a class="navbar-brand" href="./"><img src="img/lazyload-ph.png" data-src="img/IOlogomonochromeFFFFFFxxsmall.png" alt="logo" class="lazyload" /></a>
 							<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0 object-hidden" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-8472">
 								<span class="navbar-toggler-icon"></span>
 							</button>
@@ -47,6 +131,9 @@
 								<ul class="site-navigation nav navbar-nav ms-auto object-hidden">
 									<li class="nav-item">
 										<a href="./" class="nav-link ltc-anti-flash-white">The Binary Organisation - IO</a>
+									</li>
+									<li class="nav-item">
+										<a href="./home-space-test/" class="a-btn nav-link ltc-anti-flash-white">Home-1</a>
 									</li>
 								</ul>
 							</div>
@@ -59,13 +146,13 @@
 			<div class="row">
 				<div class="align-self-center col-md-7 col-lg-7">
 					<h1 class="text-center text-md-start mg-md tc-white h1-style">
-						Digital rights are human rights.<br>
+						….Digital rights are human rights..Ψηφιακά δικαιώματα είναι τα ανθρώπινα δικαιώματα….
 					</h1>
-					<h5 class="float-none mg-md tc-white text-lg-start">
-						Digital rights are <strike>basically</strike> human rights in the digital era. <br>The rights to online privacy, the protection of personal data, access to information and freedom of expression, are really extensions of the equal and inalienable rights laid out in the United Nation&rsquo;s Universal Declaration of Human Rights.<br><br>Thus, by extension, the evolution of technology and the corresponding expansion of human activities in the digital world it is inevitable to broaden the digital rights map even further.
+					<h5 class="float-none mg-md tc-white text-lg-start h5-style">
+						….Digital rights are&nbsp;human rights in the digital era. ..Τα ψηφιακά δικαιώματα είναι τα ανθρώπινα δικαιώματα στην ψηφιακή εποχή. ..<br>….<br>The rights to online privacy, the protection of personal data, access to information and freedom of expression, are really extensions of the equal and inalienable rights laid out in the United Nation&rsquo;s Universal Declaration of Human Rights. ..H ιδιωτικότητα, το απόρρητο, η προστασία των προσωπικών δεδομένων, η πρόσβαση σε πληροφορίες και η ελευθερία της έκφρασης, είναι προεκτάσεις των ίσων και αναπαλλοτρίωτων δικαιωμάτων που ορίζονται στην Οικουμενική Διακήρυξη των Ανθρωπίνων Δικαιωμάτων των Ηνωμένων Εθνών. ….<br><br>
 					</h5>
 					<div class="text-center d-block text-lg-start text-md-start">
-						<a href="#" class="btn btn-wire btn-lg wire-btn-white" data-scroll-speed="1000" onclick="scrollToTarget('0',this)">Learn more</a>
+						<a href="#" class="btn btn-wire wire-btn-white" data-scroll-speed="1000" onclick="scrollToTarget('0',this)">….Learn more..Μάθε περισσότερα….</a>
 					</div>
 				</div>
 			</div>
@@ -88,7 +175,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mg-md h2-projects-style tc-electric-blue">
-					Manifesto&nbsp;
+					….Manifesto..Μανιφέστο….
 				</h1>
 			</div>
 		</div>
@@ -97,101 +184,79 @@
 <!-- bloc-manifesto-title END -->
 
 <!-- bloc-manifesto-content -->
-<div class="bloc tc-anti-flash-white bgc-midnight-blue d-bloc" id="bloc-manifesto-content">
+<div class="bloc tc-anti-flash-white bgc-midnight-blue" id="bloc-manifesto-content">
 	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-12">
-				<img src="img/IO_Manifesto_cover.png" class="img-fluid mx-auto d-block" alt="IO Manifesto Cover" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Manifesto_cover.png" class="img-fluid mx-auto d-block lazyload" alt="IO Manifesto Cover" />
 			</div>
 			<div class="col-12">
 				<h2 class="mg-md tc-anti-flash-white-2">
-					The public declaration of our scope.
+					….The declaration of our scope. ..Η διακήρυξη του σκοπού μας….
 				</h2>
-				<h5 class="mg-md">
-					Considering that:<br>
+				<h5 class="mg-md tc-anti-flash-white-2">
+					….Considering that: ..Θεωρώντας ότι:....
 				</h5>
-				<ul>
+				<ul class="list-unstyled list-horizontal-layout">
 					<li>
 						<p class="p-1-style">
-							Recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world, as stated in the Universal Declaration of Human Rights<br>
+							....Recognition of the inherent dignity and of the equal and inalienable rights of all members of the human family is the foundation of freedom, justice and peace in the world, as stated in the Universal Declaration of Human Rights..Η «αναγνώριση της έμφυτης αξιοπρέπειας και των ίσων και αναφαίρετων δικαιωμάτων όλων των μελών της ανθρώπινης οικογένειας είναι το θεμέλιο της ελευθερίας, της δικαιοσύνης και της ειρήνης στον κόσμο», όπως αναφέρεται στην Οικουμενική Διακήρυξη των Ανθρωπίνων Δικαιωμάτων....
 						</p>
-					</li>
-					<li>
-						<p class="p-2-style">
-							Human in the digital age uses digital technologies for a number of reasons, including to expand own biological potential, record own thoughts, preserve own memories and consequently to improve oneself and own abilities<br>
+						<p class="p-1-style">
+							....Human in the digital age uses digital technologies for a number of reasons, including to expand own biological potential, record own thoughts, preserve own memories and consequently to improve oneself and own abilities..Ο άνθρωπος στην ψηφιακή εποχή χρησιμοποιεί ψηφιακές τεχνολογίες για μια σειρά από λόγους, μεταξύ άλλων, για να επεκτείνει τις βιολογικές δυνατότητές του, να καταγράψει τις σκέψεις του, να διατηρήσει τις μνήμες του και κατ&rsquo; επέκτασιν να βελτιώσει τον εαυτό του και τις ικανότητές του....
 						</p>
-					</li>
-					<li>
-						<p class="p-3-style">
-							Human's relationship with digital technologies is like an organisation with its members-organs<br>
+						<p class="p-1-style">
+							....Human's relationship with digital technologies is like an organisation with its members-organs..Η σχέση του ανθρώπου με τις ψηφιακές τεχνολογίες είναι όπως ενός οργανισμού με τα μέλη-όργανά του....
 						</p>
-					</li>
-					<li>
-						<p class="p-4-style">
-							The digital organs of a person can be found, as transplants, both inside (implants) and outside (explants) the biological limits of the body<br>
+						<p class="p-1-style">
+							....The digital organs of a person can be found, as transplants, both inside (implants) and outside (explants) the biological limits of the body..Τα ψηφιακά μέλη-όργανα ενός ανθρώπου μπορούν να βρίσκονται, ως μοσχεύματα, τόσο εντός (εμφυτεύματα) όσο και εκτός (εκφυτεύματα) των βιολογικών ορίων του σώματός του....
 						</p>
-					</li>
-					<li>
-						<p class="p-5-style">
-							Exclusion practices and behaviors (due to gender, race, class, ethnicity, age, sexual identity, anatomy, educational level, etc.) are represented, captured and performed in the digital landscape perpetuating inequality<br>
+						<p class="p-1-style">
+							....Exclusion practices and behaviors (due to gender, race, class, ethnicity, age, sexual identity, anatomy, educational level, etc.) are represented, captured and performed in the digital landscape perpetuating inequality..Οι πρακτικές και οι συμπεριφορές αποκλεισμού (λόγω φύλου, φυλής, τάξης, εθνότητας, ηλικίας, σεξουαλικής ταυτότητας, ανατομίας, μορφωτικού επιπέδου κ. ά.) αναπαρίστανται, αποτυπώνονται και επιτελούνται στο ψηφιακό τοπίο διαιωνίζοντας την ανισότητα....
 						</p>
 					</li>
 				</ul>
-				<h5 class="mg-md">
-					We recognise that:<br>
+				<h5 class="mg-md tc-anti-flash-white-2">
+					....We recognise that: ..Αναγνωρίζουμε ότι:....<br>
 				</h5>
-				<ul>
+				<ul class="list-unstyled list-horizontal-layout">
 					<li>
-						<p class="p-6-style">
-							The boundaries of humans in the digital age extend beyond their biological boundaries and include all the digital instruments with which they extend<br>
+						<p class="p-25777-style">
+							....The boundaries of humans in the digital age extend beyond their biological boundaries and include all the digital instruments with which they extend..Τα όρια των ανθρώπων στην ψηφιακή εποχή εκτείνονται πέρα ​από τα βιολογικά τους σύνορα και περιλαμβάνουν το σύνολο των ψηφιακών οργάνων με τα οποία επεκτείνονται....
 						</p>
-					</li>
-					<li>
-						<p class="p-7-style">
-							Digital rights are human rights in the digital age with the articles of the Universal Declaration of Human Rights valid, to protect its integrity and dignity, in all the rights and freedoms proclaimed in it<br>
+						<p class="p-25777-style">
+							....Digital rights are human rights in the digital age with the articles of the Universal Declaration of Human Rights valid, to protect its integrity and dignity, in all the rights and freedoms proclaimed in it..Τα ψηφιακά δικαιώματα είναι τα ανθρώπινα δικαιώματα στην ψηφιακή εποχή με τα άρθρα της Οικουμενικής Διακήρυξης των Ανθρωπίνων&nbsp;Δικαιωμάτων να ισχύουν, για την προστασία της ακεραιότητας και της αξιοπρέπειάς του, στο σύνολο των δικαιωμάτων και των ελευθεριών που εξαγγέλλονται σε αυτήν....
 						</p>
 					</li>
 				</ul>
-				<h5 class="mg-md">
-					Therefore,
+				<h5 class="mg-md tc-anti-flash-white-2">
+					....Therefore,..Συνεπώς,....
 				</h5>
 				<p class="p-8-style">
-					the scope of "the binary organisation" is humanitarian, social, cultural, technological, informational and educational within the mission of the parties and fully harmonised with it.&nbsp;The objectives of the organisation, which is public and non-profit, consist of:<br>
+					....the scope of "the binary organisation" is humanitarian, social, cultural, technological, informational and educational within the mission of the parties and fully harmonised with it.&nbsp;The objectives of the organisation, which is public and non-profit, consist of:..ο επιδιωκόμενος στόχος του μη κερδοσκοπικού οργανισμού ΔΕΚΑ ΑΜΚΕ είναι ανθρωπιστικός, κοινωνικός, πολιτισμικός, τεχνολογικός, ενημερωτικός και εκπαιδευτικός μέσα στα πλαίσια της αποστολής των συμβαλλομένων και πλήρως εναρμονιζόμενος μ&rsquo; αυτήν.&nbsp;Οι σκοποί της εταιρείας, οι οποίοι είναι κοινωφελείς και μη κερδοσκοπικοί, είναι:....<br>
 				</p>
-				<ul>
+				<ul class="list-unstyled list-horizontal-layout">
 					<li>
-						<p class="p-9-style">
-							The creation of the right conditions for the extension of the Universal Declaration of Human Rights to the digital landscape, enhancing the right to privacy, the protection of personal data, freedom of expression, freedom of information, the right to property -material and intellectual-, the right to litigation and anti-discrimination<br>
+						<p class="p-33166-style">
+							....The creation of the right conditions for the extension of the Universal Declaration of Human Rights to the digital landscape, enhancing the right to privacy, the protection of personal data, freedom of expression, freedom of information, the right to property -material and intellectual-, the right to litigation and anti-discrimination..Η δημιουργία των κατάλληλων συνθηκών για την επέκταση της Οικουμενικής Διακήρυξης των Ανθρωπίνων Δικαιωμάτων, στην ψηφιακή πραγματικότητα, ενισχύοντας το δικαίωμα στην ιδιωτική ζωή, την προστασία των προσωπικών δεδομένων, την ελευθερία της έκφρασης, την ελευθερία της πληροφόρησης, το δικαίωμα στην ιδιοκτησία –υλική και πνευματική-, το δικαίωμα στη δικαστική προσφυγή και την καταπολέμηση των διακρίσεων....
 						</p>
-					</li>
-					<li>
-						<p class="p-10-style">
-							Ensuring freedom of communication, expression, privacy and pluralism in accordance with constitutional requirements and promoting the anthropocentric character of science and technology as an expression of modern culture<br>
+						<p class="p-33166-style">
+							....Ensuring freedom of communication, expression, privacy and pluralism in accordance with constitutional requirements and promoting the anthropocentric character of science and technology as an expression of modern culture..Η εξασφάλιση της ελευθερίας της επικοινωνίας, της έκφρασης, της ιδιωτικότητας και της πολυφωνίας κατά τις συνταγματικές επιταγές και η προαγωγή του ανθρωποκεντρικού χαρακτήρα των επιστημών και της τεχνολογίας ως έκφραση του σύγχρονου πολιτισμού....
 						</p>
-					</li>
-					<li>
-						<p class="p-11-style">
-							Digital rights are human rights in the digital age with the articles of the Universal Declaration of Human Rights valid, to protect its integrity and dignity, in all the rights and freedoms proclaimed in it<br>
+						<p class="p-33166-style">
+							....Digital rights are human rights in the digital age with the articles of the Universal Declaration of Human Rights valid, to protect its integrity and dignity, in all the rights and freedoms proclaimed in it..Τα ψηφιακά δικαιώματα είναι ανθρώπινα δικαιώματα στην ψηφιακή εποχή με τα άρθρα της Οικουμενικής Διακήρυξης των Ανθρωπίνων Δικαιωμάτων να ισχύουν, για την προστασία της ακεραιότητας και της αξιοπρέπειάς της, σε όλα τα δικαιώματα και τις ελευθερίες που διακηρύσσονται σε αυτήν....
 						</p>
-					</li>
-					<li>
-						<p class="p-12-style">
-							Contribute to the recognition of the good of Internet access as a basic human right and its importance in achieving the UN Sustainable Development Goal, worldwide<br>
+						<p class="p-33166-style">
+							....Contribute to the recognition of the good of Internet access as a basic human right and its importance in achieving the UN Sustainable Development Goal, worldwide..Η συμβολή στην αναγνώριση του αγαθού της πρόσβασης στο Διαδίκτυο ως βασικό ανθρώπινο δικαίωμα και της σημασίας του στην επίτευξη του στόχου της βιώσιμης ανάπτυξης του ΟΗΕ σε παγκόσμιο επίπεδο....
 						</p>
-					</li>
-					<li>
-						<p class="p-13-style">
-							Support the development and promotion of business models, by informing and guiding businesses to integrate or switch to open source, encryption, usability and interoperability solutions, without exception and with respect to digital rights<br>
+						<p class="p-33166-style">
+							....Support the development and promotion of business models, by informing and guiding businesses to integrate or switch to open source, encryption, usability and interoperability solutions, without exception and with respect to digital rights..Η υποστήριξη ανάπτυξης και προώθησης επιχειρηματικών μοντέλων, με την ενημέρωση και την καθοδήγηση των επιχειρήσεων να ενσωματώσουν ή να μεταβούν σε λύσεις, που βασίζονται στον ανοιχτό κώδικα, στην κρυπτογράφηση, στην ευχρηστία και τη διαλειτουργικότητα, χωρίς αποκλεισμούς και με σεβασμό στο ιδιωτικό απόρρητο....
 						</p>
-					</li>
-					<li>
-						<p class="p-14-style">
-							Covering the lack of valid, timely and centralised information, informing and sensitizing the wider community on issues of recognition and respect for digital human rights through modern media<br>
+						<p class="p-33166-style">
+							....Covering the lack of valid, timely and centralised information, informing and sensitizing the wider community on issues of recognition and respect for digital human rights through modern media..Η φροντίδα για την κάλυψη των ελλείψεων έγκυρης, έγκαιρης και συγκεντρωτικής πληροφόρησης, η ενημέρωση και ευαισθητοποίηση της&nbsp;ευρύτερης κοινότητας σε θέματα αναγνώρισης και σεβασμού των ψηφιακών&nbsp;δικαιωμάτων των Ανθρώπων μέσω των σύγχρονων μέσων επικοινωνίας....
 						</p>
-					</li>
-					<li>
-						<p class="p-15-style">
-							Creating an environment through information and awareness-raising, where digital technologies can contribute to a fairer, more democratic and more sustainable society<br>
+						<p class="p-33166-style">
+							....Creating an environment through information and awareness-raising, where digital technologies can contribute to a fairer, more democratic and more sustainable society..Η δημιουργία ενός περιβάλλοντος, μέσω της ενημέρωσης και της ευαισθητοποίησης, όπου οι ψηφιακές τεχνολογίες μπορούν να συμβάλλουν&nbsp;σε μια πιο δίκαιη, δημοκρατική και βιώσιμη κοινωνία....
 						</p>
 					</li>
 				</ul>
@@ -207,7 +272,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mg-md h2-projects-style tc-electric-blue">
-					Roadmap
+					....Vision..Όραμα....
 				</h1>
 			</div>
 		</div>
@@ -220,20 +285,20 @@
 	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-sm-4 col">
-				<img src="img/IO_Roadmap_icon.png" class="img-fluid rounded mx-auto d-block" alt="IO Roadmap icon" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Roadmap_icon.png" class="img-fluid rounded mx-auto d-block lazyload" alt="IO Roadmap icon" />
 			</div>
 			<div class="col-sm-8 col">
 				<h3 class="mg-md tc-anti-flash-white">
-					Our five era pillars, in a infinite mindset
+					....Our five era pillars, in a infinite mindset..Οι πυλώνες των πέντε εποχών, σε μια νοοτροπία δίχως χρονικό όριο....
 				</h3>
 				<p class="float-lg-none p-18-style">
-					All the way, from the genesis block onwards we are based on a peer-reviewed social, technological and architecture research carrying an ethos of openness and transparency.&nbsp;All of the research and technical specifications that underpin our projects are publicly published, and all of our development activity is made available to the public.<br><br>
+					....All the way, from the genesis block onwards we are based on a peer-reviewed social, technological and architecture research carrying an ethos of openness and transparency.&nbsp;All of the research and technical specifications that underpin our projects are publicly published, and all of our development activity is made available to the public. ..Σε όλη τη διαδρομή, από το μπλοκ της γένεσης και μετά, βασιζόμαστε σε μια κοινωνική, τεχνολογική και αρχιτεκτονική έρευνα με ομότιμα μέλη που φέρουν ένα ήθος ανοικτότητας και διαφάνειας. Όλες οι ερευνητικές και τεχνικές προδιαγραφές που στηρίζουν τα έργα μας δημοσιεύονται δημόσια και όλη η αναπτυξιακή μας δραστηριότητα διατίθεται στο κοινό. ....<br><br>
 				</p>
 				<h4 class="mg-md tc-anti-flash-white">
-					Time is relative, binary isn&rsquo;t
+					....Time is relative, binary isn&rsquo;t..Ο χρόνος είναι σχετικός, ο δυαδικός όχι....
 				</h4>
 				<p class="float-lg-none p-19-style">
-					Our structured roadmap is a summary of our development, which has been organised into five eras: Culture, Technology, Education, Law, and Inclusion. Each era is centered around a set of deliverables that will be released across multiple project cycles.<br><br>While the eras of our scope will be delivered sequentially, the work for each era happens in parallel, with research, prototyping, and development often in progress all at once across the different research and development streams.<br><br>The work of each era is gathered and presented on its dedicated section, representing years of effort. In every area we deliver an overview of the goals of each one, as well as descriptions of the core functional components, links to associated journalistic and technological research, status updates, and even real-time commits.<br>
+					....Our structured vision is a summary of our development, which has been organised into five eras: Culture, Technology, Education, Law, and Inclusion. Each era is centered around a set of deliverables that will be released across multiple project cycles. ..To δομημένο όραμά μας είναι μια μικρή περίληψη της ανάπτυξής μας, η οποία έχει οργανωθεί και αποτυπωθεί σε πέντε εποχές: Πολιτισμός, Τεχνολογία, Εκπαίδευση, Δίκαιο και Ένταξη. Η κάθε εποχή επικεντρώνεται γύρω από ένα σύνολο παραδοτέων που θα κυκλοφορήσουν σε πολλούς κύκλους έργων. ....<br><br>....While the eras of our scope will be delivered sequentially, the work for each era happens in parallel, with research, prototyping, and development often in progress all at once across the different research and development streams. ..Ενώ οι εποχές του αντικειμένου μας θα παραδοθούν διαδοχικά, η εργασία για κάθε εποχή συμβαίνει παράλληλα, με την έρευνα, τη δημιουργία πρωτοτύπων και την ανάπτυξη συχνά σε εξέλιξη σε όλες τις διαφορετικές ροές έρευνας και ανάπτυξης. ....<br><br>....The work of each era is gathered and presented on its dedicated section, representing years of effort. In every area we deliver an overview of the goals of each one, as well as descriptions of the core functional components, links to associated journalistic and technological research, status updates, and even real-time commits. ..Το έργο κάθε εποχής συγκεντρώνεται και παρουσιάζεται στην ειδική του ενότητα, αντιπροσωπεύοντας μεγάλο χρόνο εργασίας. Σε κάθε τομέα παρέχουμε μια επισκόπηση των στόχων της κάθε μιας ενότητας, καθώς και περιγραφές των βασικών λειτουργικών στοιχείων της, συνδέσμους προς σχετική δημοσιογραφική και τεχνολογική έρευνα, ενημερώσεις, ακόμη και δεσμεύσεις σε πραγματικό χρόνο. ....<br>
 				</p>
 			</div>
 		</div>
@@ -247,13 +312,13 @@
 		<div class="row">
 			<div class="col">
 				<h2 class="mg-md text-lg-end tc-white">
-					First Era
+					....First Era..Πρώτη Εποχή....
 				</h2>
 				<h1 class="mg-md tc-fuchsia text-lg-end">
-					Culture
+					....Culture..Πολιτισμός....
 				</h1>
 				<h2 class="mg-md tc-electric-blue text-lg-start">
-					Projects
+					....Projects..Έργα....
 				</h2>
 			</div>
 		</div>
@@ -266,7 +331,7 @@
 	<div class="container bloc-sm-lg bloc-md-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-md-4">
-				<img src="img/IO_1Projects_Informachine_Organisation.png" class="img-fluid mx-auto d-block" alt="Informachine Organisation" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_1Projects_Informachine_Organisation.png" class="img-fluid mx-auto d-block lazyload" alt="Informachine Organisation" />
 				<h4 class="mg-md float-lg-none tc-fuchsia-2 text-lg-center">
 					Informachine Organisation
 				</h4>
@@ -284,7 +349,7 @@
 				</h3>
 			</div>
 			<div class="col-md-4">
-				<img src="img/IO_1Projects_Panopticon_Exhibition.png" class="img-fluid mx-auto d-block" alt="Panopticon Exhibition" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_1Projects_Panopticon_Exhibition.png" class="img-fluid mx-auto d-block lazyload" alt="Panopticon Exhibition" />
 				<h4 class="mg-md tc-fuchsia-2 text-lg-center">
 					The Panopticon Museum
 				</h4>
@@ -302,7 +367,7 @@
 				</h3>
 			</div>
 			<div class="col-md-4">
-				<img src="img/IO_1Projects_Click.png" class="img-fluid mx-auto d-block" alt="Click Animation &amp; Print" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_1Projects_Click.png" class="img-fluid mx-auto d-block lazyload" alt="Click Animation &amp; Print" />
 				<h4 class="mg-md tc-fuchsia-2 text-lg-center">
 					Click
 				</h4>
@@ -330,10 +395,10 @@
 		<div class="row">
 			<div class="col">
 				<h2 class="mg-md text-lg-end tc-white">
-					Second Era
+					....Second Era..Δεύτερη Εποχή....
 				</h2>
 				<h1 class="mg-md tc-fuchsia text-lg-end">
-					Technology
+					....Technology..Τεχνολογία....
 				</h1>
 			</div>
 		</div>
@@ -346,23 +411,23 @@
 	<div class="container bloc-sm bloc-sm-lg">
 		<div class="row">
 			<div class="col-md-12 offset-lg--1 col-lg-6">
-				<img src="img/IO_Frame_of_Era_02_v2.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous" alt="IO Second Era - Technology" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Frame_of_Era_02_v2.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous lazyload" alt="IO Second Era - Technology" />
 				<h3 class="mg-md">
 					<br>
 				</h3>
 			</div>
 			<div class="align-self-center offset-md-1 col-md-10 col-sm-10 offset-sm-1 offset-1 col-10 offset-lg-1 col-lg-4 scroll-fx-left-in scroll-fx-right-out scroll-fx-continuous">
 				<h2 class="mg-md h2-style tc-fuchsia">
-					Coming in 2024
+					....Coming in 2024..Εκκίνηση 2024....
 				</h2>
 				<h5 class="mg-md h3-style tc-anti-flash-white-2">
-					The Internet of Beings
+					....The Internet of Beings..Το Διαδίκτυο των ανθρώπων....
 				</h5>
 				<h6 class="mg-md h3-style tc-anti-flash-white-2">
-					Ethical, decentralised, free and open alternatives, from the commons to everyone
+					....Ethical, decentralised, free and open alternatives, from the commons to everyone..Ηθικές, αποκεντρωμένες, ελεύθερες και ανοιχτές εναλλακτικές λύσεις, από τα κοινά σε όλους....
 				</h6>
 				<p class="p-style">
-					The key era to making ethical technology that can be used in the mainstream to build useful and convenient services that acknowledge and respect human rights. This era ignites the creation of sustainable services in the common interest,&nbsp;from the commons fund, for the common good.
+					....The key era to making ethical technology that can be used in the mainstream to build useful and convenient services that acknowledge and respect human rights. This era ignites the creation of sustainable services in the common interest,&nbsp;from the commons fund, for the common good. ..Η εποχή-κλειδί για τη δημιουργία ηθικής τεχνολογίας που μπορεί να χρησιμοποιηθεί στην επικρατούσα τάση για τη δημιουργία χρήσιμων και βολικών υπηρεσιών που αναγνωρίζουν και σέβονται τα ανθρώπινα δικαιώματα. Αυτή η εποχή πυροδοτεί τη δημιουργία βιώσιμων υπηρεσιών προς το κοινό συμφέρον,&nbsp;από το ταμείο κοινών, για το κοινό καλό. ....
 				</p>
 			</div>
 		</div>
@@ -376,10 +441,10 @@
 		<div class="row">
 			<div class="col">
 				<h2 class="mg-md text-lg-end tc-white">
-					Third Era
+					....Third Era..Τρίτη Εποχή....
 				</h2>
 				<h1 class="mg-md tc-fuchsia text-lg-end">
-					Education
+					....Education..Εκπαίδευση....
 				</h1>
 			</div>
 		</div>
@@ -392,23 +457,23 @@
 	<div class="container bloc-sm bloc-sm-lg">
 		<div class="row">
 			<div class="col-md-12 offset-lg--1 col-lg-6">
-				<img src="img/IO_Frame_of_Era_03_v7.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous" alt="IO Third Era - Education" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Frame_of_Era_03_v7.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous lazyload" alt="IO Third Era - Education" />
 				<h3 class="mg-md">
 					<br>
 				</h3>
 			</div>
 			<div class="align-self-center offset-md-1 col-md-10 col-sm-10 offset-sm-1 offset-1 col-10 offset-lg-1 col-lg-4 scroll-fx-left-in scroll-fx-right-out scroll-fx-continuous">
 				<h2 class="mg-md h2-style tc-fuchsia">
-					Coming in 2026
+					....Coming in 2026..Εκκίνηση 2026....
 				</h2>
 				<h5 class="mg-md h3-style tc-anti-flash-white-2">
-					The stepping stone to everything
+					....The stepping stone to everything..Το πρώτο βήμα για όλα....
 				</h5>
 				<h6 class="mg-md h3-style tc-anti-flash-white-2">
-					A model to develop critical thinking, creativity, citizenship and skills at massive scale.
+					....A model to develop critical thinking, creativity, citizenship and skills at massive scale. ..Ένα μοντέλο για την ανάπτυξη της κριτικής σκέψης, της δημιουργικότητας, της ιδιότητας του πολίτη και των δεξιοτήτων σε μαζική κλίμακα. ....
 				</h6>
 				<p class="p-style">
-					Strong education systems lead to greater social mobility, better citizens, more sustainable development and high levels of Democracy, as a&nbsp;small increase in the learning output of education systems across the globe would have an enormous impact on human productivity and economic growth.<br>
+					....Strong education systems lead to greater social mobility, better citizens, more sustainable development and high levels of Democracy, as a&nbsp;small increase in the learning output of education systems across the globe would have an enormous impact on human productivity and economic growth. ..Τα ισχυρά εκπαιδευτικά συστήματα οδηγούν σε μεγαλύτερη κοινωνική κινητικότητα, ενεργούς πολίτες, πιο βιώσιμη ανάπτυξη και υψηλά επίπεδα δημοκρατίας, καθώς μια&nbsp;μικρή αύξηση της μαθησιακής απόδοσης των εκπαιδευτικών συστημάτων σε όλο τον κόσμο θα είχε τεράστιο αντίκτυπο στην ανθρώπινη παραγωγικότητα και την οικονομική ανάπτυξη. ....<br>
 				</p>
 			</div>
 		</div>
@@ -422,10 +487,10 @@
 		<div class="row">
 			<div class="col">
 				<h2 class="mg-md text-lg-end tc-white">
-					Fourth Era
+					....Fourth Era..Τέταρτη Εποχή....
 				</h2>
 				<h1 class="mg-md tc-fuchsia text-lg-end">
-					Law
+					....Law..Δίκαιο....
 				</h1>
 			</div>
 		</div>
@@ -438,23 +503,23 @@
 	<div class="container bloc-sm bloc-sm-lg">
 		<div class="row">
 			<div class="col-md-12 offset-lg--1 col-lg-6">
-				<img src="img/IO_Frame_of_Era_03_v2.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous" alt="IO Forth Era - Law" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Frame_of_Era_03_v2.jpg" class="img-fluid img-rd-lg mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous lazyload" alt="IO Forth Era - Law" />
 				<h3 class="mg-md">
 					<br>
 				</h3>
 			</div>
 			<div class="align-self-center offset-md-1 col-md-10 col-sm-10 offset-sm-1 offset-1 col-10 offset-lg-1 col-lg-4 scroll-fx-left-in scroll-fx-right-out scroll-fx-continuous">
 				<h2 class="mg-md h2-style tc-fuchsia">
-					Coming in 2028
+					....Coming in 2028..Εκκίνηση 2028....
 				</h2>
 				<h5 class="mg-md h3-style tc-anti-flash-white-2">
-					The pure form of Democracy
+					....The pure form of Democracy..Η καθαρή μορφή της Δημοκρατίας....
 				</h5>
 				<h6 class="mg-md h3-style tc-anti-flash-white-2">
-					Open-source governance advocates the open-source and open-content movements to democratic principles
+					....Open-source governance advocates the open-source and open-content movements to democratic principles..Η διακυβέρνηση ανοιχτού κώδικα υποστηρίζει τα κινήματα ανοιχτού κώδικα και ανοιχτού περιεχομένου σε δημοκρατικές αρχές....
 				</h6>
 				<p class="p-style">
-					This era cracks the problem that regulations designed to protect people can&rsquo;t change fast enough to keep up with the pace at which technology is changing the needs of those citizens around the world.
+					....This era cracks the problem that regulations designed to protect people can&rsquo;t change fast enough to keep up with the pace at which technology is changing the needs of those citizens around the world. ..Η εποχή που εργάζεται στο πρόβλημα ότι οι κανονισμοί που έχουν σχεδιαστεί για την προστασία των ανθρώπων δεν μπορούν να αλλάξουν αρκετά γρήγορα για να συμβαδίσουν με τον ρυθμό με τον οποίο η τεχνολογία αλλάζει τις ανάγκες αυτών των πολιτών σε όλο τον κόσμο. ....
 				</p>
 			</div>
 		</div>
@@ -468,10 +533,10 @@
 		<div class="row">
 			<div class="col">
 				<h2 class="mg-md text-lg-end tc-white">
-					Fifth Era
+					....Fifth Era..Πέμπτη Εποχή....
 				</h2>
 				<h1 class="mg-md tc-fuchsia text-lg-end">
-					Inclusion
+					....Inclusion..Ένταξη....
 				</h1>
 			</div>
 		</div>
@@ -484,23 +549,23 @@
 	<div class="container bloc-sm bloc-lg-lg bloc-sm-sm">
 		<div class="row voffset-clear-sm">
 			<div class="col-md-12 offset-lg--1 col-lg-6">
-				<img src="img/IO_Frame_of_Era_05_v5.jpg" class="img-fluid mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous img-rd-lg" alt="IO Fifth Era - Inclusion" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Frame_of_Era_05_v5.jpg" class="img-fluid mx-auto d-block scroll-fx-right-out scroll-fx-left-in scroll-fx-continuous img-rd-lg lazyload" alt="IO Fifth Era - Inclusion" />
 				<h3 class="mg-md">
 					<br>
 				</h3>
 			</div>
 			<div class="align-self-center offset-md-1 col-md-10 col-sm-10 offset-sm-1 offset-1 col-10 offset-lg-1 col-lg-4 scroll-fx-left-in scroll-fx-right-out scroll-fx-continuous">
 				<h2 class="mg-md h2-style tc-fuchsia">
-					Coming in 2030
+					....Coming in 2030..Εκκίνηση 2030....
 				</h2>
 				<h5 class="mg-md h3-style tc-anti-flash-white-2">
-					The year of the unicorn
+					....The year of the unicorn..Το έτος του μονόκερου....
 				</h5>
 				<h6 class="mg-md h3-style tc-anti-flash-white-2">
-					The basis of providing equal access to opportunities and resources for people
+					....The basis of providing equal access to opportunities and resources for people..Η βάση της παροχής ίσης πρόσβασης σε ευκαιρίες και πόρους για τους ανθρώπους....
 				</h6>
 				<p class="p-style">
-					Building a culture of human rights and inclusion in diversity,&nbsp;requires addressing discriminatory structures and provide a space where everyone has equal access to opportunities and resources and where everyone feels valued and accepted.
+					....Building a culture of human rights and inclusion in diversity,&nbsp;requires addressing discriminatory structures and provide a space where everyone has equal access to opportunities and resources and where everyone feels valued and accepted. ..Η οικοδόμηση μιας κουλτούρας ανθρωπίνων δικαιωμάτων και η συμπερίληψη στην πολυμορφία,&nbsp;απαιτεί την αντιμετώπιση δομών που εισάγουν διακρίσεις και την παροχή ενός χώρου όπου όλοι έχουν ίση πρόσβαση σε ευκαιρίες και πόρους και όπου όλοι νιώθουν ότι έχουν αξία και αποδοχή. ....
 				</p>
 			</div>
 		</div>
@@ -514,7 +579,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mg-md h2-projects-style tc-electric-blue">
-					Team<br>
+					....Team..Ομάδα....<br>
 				</h1>
 			</div>
 		</div>
@@ -527,20 +592,20 @@
 	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-sm-4 col">
-				<img src="img/IO_Team_AT.png" class="img-fluid rounded mx-auto d-block" alt="IO Team icon" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Team_AT.png" class="img-fluid rounded mx-auto d-block lazyload" alt="IO Team icon" />
 			</div>
 			<div class="col-sm-8 col">
 				<h3 class="mg-md tc-anti-flash-white">
-					We are human beings, like you.
+					....We are human beings, like you. ..Είμαστε άνθρωποι, όπως εσείς. ....
 				</h3>
 				<p class="float-lg-none p-27-style">
-					Digital technology has transformed the way we live, communicate, think, express and opened up limitless new ways to connect, share and learn across the world, but for all the benefits, technological developments have created new threats to our human rights. We stand to raise awareness of these threats and challenge them through public campaigns, media commentary, legal actions, policy interventions and tech projects.<br>
+					....Digital technology has transformed the way we live, communicate, think, express and opened up limitless new ways to connect, share and learn across the world, but for all the benefits, technological developments have created new threats to our human rights. We stand to raise awareness of these threats and challenge them through public campaigns, media commentary, legal actions, policy interventions and tech projects. ..Η ψηφιακή τεχνολογία έχει αλλάξει τον τρόπο που ζούμε, επικοινωνούμε, σκεφτόμαστε, εκφραζόμαστε και έχει ανοίξει απεριόριστους νέους τρόπους σύνδεσης, κοινής χρήσης και μάθησης σε όλο τον κόσμο, αλλά παρ' όλα τα οφέλη, οι τεχνολογικές εξελίξεις έχουν δημιουργήσει νέες απειλές για τα ανθρώπινα δικαιώματά μας. Θέλουμε να ενημερώσουμε και να ευαισθητοποιήσουμε γι' αυτές τις απειλές και να τις αμφισβητήσουμε μέσω δημόσιων εκστρατειών, σχολίων μέσων ενημέρωσης, νομικών ενεργειών, παρεμβάσεων πολιτικής και τεχνολογικών έργων. ....<br>
 				</p>
 				<h4 class="mg-md tc-anti-flash-white">
-					More like a band, less like a gang.
+					....More like a band, less like a gang. ..Είμαστε διαφορετικοί αλλά και λειτουργούμε ως ένα σώμα. ....
 				</h4>
 				<p class="float-lg-none p-27-style">
-					Our core team consists of technologists, journalists, lawyers and&nbsp;museologists aiming in exposing the invisible digital landscape to the public, in physical world terms.
+					....Our core team consists of technologists, journalists, lawyers and&nbsp;museologists aiming in exposing the invisible digital landscape to the public, in physical world terms. ..Ο βασικός πυρήνας της ομάδας αποτελείται από τεχνολόγους, δημοσιογράφους, δικηγόρους και μουσειολόγους που στοχεύουν στην έκθεση του αόρατου ψηφιακού τοπίου στο κοινό, με όρους φυσικού κόσμου. ....
 				</p>
 			</div>
 		</div>
@@ -554,7 +619,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mg-md h2-projects-style tc-electric-blue">
-					Support&nbsp;
+					....Support..Υποστήριξη....
 				</h1>
 			</div>
 		</div>
@@ -567,20 +632,20 @@
 	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-sm-4 col">
-				<img src="img/IO_Support_our_causes.png" class="img-fluid rounded mx-auto d-block" alt="IO Support our causes" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Support_our_causes.png" class="img-fluid rounded mx-auto d-block lazyload" alt="IO Support our causes" />
 			</div>
 			<div class="col-sm-8 col">
 				<h3 class="mg-md tc-anti-flash-white">
-					Your support is always welcome
+					....Your support is always welcome. ..Η υποστήριξή σας είναι πάντα ευπρόσδεκτη. ....
 				</h3>
 				<p class="float-lg-none p-43-style">
-					We are a non-profit organisation defending digital rights via a variety of methods and initiatives.&nbsp;If you share our vision and you want to support our work, please consider donating, volunteering and sharing our projects with your family and friends.<br><br>
+					....We are a non-profit organisation defending digital rights via a variety of methods and initiatives.&nbsp;If you share our vision and you want to support our work, please consider donating, volunteering and sharing our projects with your family and friends. ..Είμαστε ένας μη κερδοσκοπικός οργανισμός που υπερασπίζεται τα ψηφιακά δικαιώματα μέσω ποικίλων μεθόδων και πρωτοβουλιών. Εάν μοιράζεστε το όραμά μας και θέλετε να υποστηρίξετε το έργο μας, μπορείτε να κάνετε δωρεές, να προσφέρετε εθελοντικά εργασία ή τεχνογνωσία και να μοιραστείτε τα έργα μας με την οικογένεια και τους φίλους σας. ....<br><br>
 				</p>
 				<h4 class="mg-md tc-anti-flash-white">
-					We always give it back to community
+					....We always give it back to community. ..Επιστρέφουμε το σύνολο στην κοινότητα....
 				</h4>
 				<p class="float-lg-none p-44-style">
-					Our vision is a world where digital technologies contribute to a more equitable, democratic and sustainable society. Since our genesis block, we have been producing research, information, media, short films and public interventions that help us to achieve this vision.<br>
+					....Our vision is a world where digital technologies contribute to a more equitable, democratic and sustainable society. Since our genesis block, we have been producing research, information, media, short films and public interventions that help us to achieve this vision. ..Το όραμά μας είναι ένας κόσμος όπου οι ψηφιακές τεχνολογίες συμβάλλουν σε μια πιο δίκαιη, δημοκρατική και βιώσιμη κοινωνία. Από το μπλοκ της γένεσής μας, παράγουμε έρευνα, πληροφορίες, μέσα ενημέρωσης, ταινίες μικρού μήκους και δημόσιες παρεμβάσεις που μας βοηθούν να επιτύχουμε αυτό το όραμα. ....<br>
 				</p>
 			</div>
 		</div>
@@ -594,7 +659,7 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="mg-md h2-projects-style tc-electric-blue">
-					Contact&nbsp;
+					....Contact..Επικοινωνία....
 				</h1>
 			</div>
 		</div>
@@ -607,26 +672,26 @@
 	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
 		<div class="row">
 			<div class="col-sm-4 col">
-				<img src="img/IO_Contact.png" class="img-fluid rounded mx-auto d-block" alt="placeholder image" />
+				<img src="img/lazyload-ph.png" data-src="img/IO_Contact.png" class="img-fluid rounded mx-auto d-block lazyload" alt="placeholder image" />
 			</div>
 			<div class="col-sm-8 col">
 				<h3 class="mg-md tc-anti-flash-white">
-					The <strike>last</strike>&nbsp;frontier
+					....The <strike>last</strike>&nbsp;frontier. ..Τα <strike>τελικό</strike> σύνορο. ....
 				</h3>
 				<p class="float-lg-none p-45-style">
-					We&rsquo;re always interested in hearing from you and whether you have a comment, suggestion, question, idea, or media inquiry, please don&rsquo;t hesitate to reach out. We always respond to all communications, the soonest possible.<br>
+					....We&rsquo;re always interested in hearing from you and whether you have a comment, suggestion, question, idea, or media inquiry, please don&rsquo;t hesitate to reach out. We always respond to all communications, the soonest possible. ..Πάντα μας ενδιαφέρει να ακούσουμε τη γνώμη σας και εάν έχετε κάποιο σχόλιο, πρόταση, ερώτηση, ιδέα ή ερώτηση μέσων ενημέρωσης, μη διστάσετε να επικοινωνήσετε. Απαντάμε πάντα σε όλες τις επικοινωνίες, το συντομότερο δυνατό. ....<br>
 				</p>
 				<h4 class="mg-md tc-anti-flash-white">
-					One small step for you, one giant leap for humanity
+					....One small step for you, one giant leap for humanity. ..Ένα μικρό βήμα για εσένα, ένα τεράστιο άλμα για την ανθρωπότητα....
 				</h4>
 				<p class="float-lg-none p-46-style">
-					Much of what takes place at The Binary Organisation happens during office hours. Group partners host group office hours every two weeks and one-on-one office hours as often as counterparts want. What all parties talk about at office hours depends on the stage of the roadmap and where we are in our cycles.<br>
+					....Much of what takes place at The Binary Organisation happens during office hours. Group partners host group office hours every two weeks and one-on-one office hours as often as counterparts want. What all parties talk about at office hours depends on the stage of the roadmap and where we are in our cycles. ..Πολλά από αυτά που λαμβάνουν χώρα στον οργανισμό μας συμβαίνουν κατά τις ώρες γραφείου. Οι συνεργάτες της ομάδας φιλοξενούν ομαδικές ώρες γραφείου κάθε δύο εβδομάδες και one-on-one όσο συχνά θέλουν οι ομόλογοί τους. Όλα όσα συζητούν όλα τα μέρη εξαρτάται από το στάδιο του σχεδίου δράσεων και από το το χρόνο πού βρισκόμαστε. ....<br>
 				</p>
 				<p class="float-lg-none p-47-style">
-					Office hours don&rsquo;t stop in the office. We have office hours year round, discussions on active projects from all previous project cycles and volunteers or employees can book time whenever they deem necessary.<br>
+					....Office hours don&rsquo;t stop in the office. We have office hours year round, discussions on active projects from all previous project cycles and volunteers or employees can book time whenever they deem necessary. ..Οι ώρες γραφείου δεν έχουν απαραίτητα σχέση με την εργασία. Έχουμε ώρες γραφείου όλο το χρόνο, συζητήσεις για ενεργά ζητήματα από όλους τους προηγούμενους κύκλους έργων και οι εθελοντές ή οι εργαζόμενοι μπορούν να συμμετέχουν όποτε κρίνουν απαραίτητο. ....<br>
 				</p>
 				<p class="float-lg-none p-48-style">
-					In our commitment to making our text, audio, video content and project's platforms more accessible to every person around the globe, you're also highly encouraged to send us any accessibility requests or recommendations using your preferred communication method.<br>
+					....In our commitment to making our text, audio, video content and project's platforms more accessible to every person around the globe, you're also highly encouraged to send us any accessibility requests or recommendations using your preferred communication method. ..Στη δέσμευσή μας να κάνουμε τις πλατφόρμες περιεχομένου κειμένου, ήχου, βίντεο και του έργου μας πιο προσιτές σε κάθε άτομο σε όλο τον κόσμο, σας ενθαρρύνουμε να μας στείλετε τυχόν αιτήματα προσβασιμότητας ή προτάσεις χρησιμοποιώντας τη μέθοδο επικοινωνίας που προτιμάτε. ....<br>
 				</p>
 			</div>
 		</div>
@@ -645,60 +710,62 @@
 		<div class="row">
 			<div class="col-md-3 col-sm-6">
 				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
-					Office Address
+					....Office Address..Διεύθυνση....
 				</h4>
-				<h6 class="h6-bloc-footer-style mg-sm tc-midnight-blue">
-					KOMNINAKI 9
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					....KOMNINAKI 9..ΚΟΜΝΗΝΑΚΗ 9....
 				</h6>
-				<h6 class="h6-bloc-footer-style mg-sm tc-midnight-blue">
-					81100 MITILINI, GREECE
-				</h6>
-				<h6 class="h6-bloc-footer-style mg-sm tc-midnight-blue">
-					Weekdays 10 am to 6 pm
-				</h6>
-				<h6 class="h6-bloc-footer-style mg-sm tc-midnight-blue">
-					Weekends upon request
-				</h6>
-				<p>
-					<br>
-				</p><a href="#" class="a-btn a-block footer-link h6-style ltc-dark-jungle-green">Tel: (+30) 801 10 10 110</a><a href="#" class="a-btn a-block footer-link ltc-dark-jungle-green h6-style">Email: inbox@thebinary.org</a><a href="#" class="a-btn a-block footer-link ltc-dark-jungle-green link-801-10-10-110-style"></a>
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					....81100 MITILINI, GREECE..81100 ΜΥΤΙΛΗΝΗ....
+				</h6><a href="tel:+308011010110" class="a-btn a-block footer-link h6-style ltc-midnight-blue">Tel: (+30) 801 10 10 110</a><a href="mailto:inbox@thebinary.org" class="a-btn a-block footer-link h6-style ltc-midnight-blue">Email: inbox@thebinary.org</a>
 			</div>
 			<div class="col-md-3 col-sm-6">
 				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
-					Shortcuts
-				</h4><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-manifesto-title',this)">Manifesto</a><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-roadmap-title',this)">Roadmap</a><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-team-title',this)">Team</a><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block object-hidden h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-grants-title',this)">Grants</a><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-support-title',this)">Support</a><a href="#" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-contact-title',this)">Contact</a><a href="#" class="a-btn a-block footer-link ltc-dark-jungle-green link-bloc-6-style"></a>
-				<p>
-					<br>
-				</p><a href="#" class="a-btn a-block footer-link ltc-dark-jungle-green link-801-10-10-110-style"></a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
-					Social Connections
-				</h4><a href="https://www.twitter.com/" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" target="_blank">Twitter</a><a href="https://www.facebook.com/" class="a-btn footer-link ltc-dark-jungle-green a-block h6-style" target="_blank">Facebook</a>
-				<p>
-					<br>
-				</p><a href="#" class="a-btn a-block footer-link ltc-dark-jungle-green link-801-10-10-110-style"></a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
-					Organisation<br>
+					....Shortcuts..Συντομεύσεις....
 				</h4>
-				<div class="row">
-					<div class="col-12">
-						<h6 class="h6-style tc-midnight-blue mg-sm">
-							DEKA AMKE | THE BINARY ORG
-						</h6>
-						<h6 class="h6-style tc-midnight-blue mg-sm">
-							VIES TAX ID EL996960491
-						</h6>
-						<h6 class="h6-style tc-midnight-blue mg-sm">
-							SOCIAL REGISTRY OFFICE 000194412031
-						</h6>
-						<h6 class="h6-style tc-midnight-blue mg-sm">
-							BUSINESS REGISTRY OFFICE 158285342000
-						</h6>
-					</div>
-				</div>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="#" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-manifesto-title',this)">....Manifesto..Μανιφέστο....</a>
+				</h6>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="#" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-roadmap-title',this)">....Vision..Όραμα....</a>
+				</h6>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="#" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-team-title',this)">....Team..Ομάδα....</a>
+				</h6>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="#" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-support-title',this)">....Support..Υποστήριξη....</a>
+				</h6>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="#" data-scroll-speed="1000" onclick="scrollToTarget('#bloc-support-title',this)">....Contact..Επικοινωνία....</a>
+				</h6>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
+					....Social Connections..Συνδέσεις....
+				</h4>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="https://www.twitter.com/">Twitter</a>
+				</h6>
+				<h6 class="tc-midnight-blue h6-20-style mg-sm">
+					<a class="footer-link h6-style ltc-midnight-blue a-block" href="https://www.facebook.com/">Facebook</a>
+				</h6>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<h4 class="mg-md text-center text-sm-start tc-persian-indigo">
+					....Organisation..Οργανισμός....<br>
+				</h4>
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					THE BINARY ORG | ΔEKA AMKΕ
+				</h6>
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					....VIES TAX ID EL996960491..VIES ΑΦΜ EL996960491....
+				</h6>
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					....SOCIAL REGISTRY OFFICE 000194412031..ΑΓΕΜΚΟ&nbsp;000194412031....
+				</h6>
+				<h6 class="mg-sm tc-midnight-blue footer-link h6-style">
+					....BUSINESS REGISTRY OFFICE 158285342000..ΓΕΜΗ&nbsp;158285342000....
+				</h6>
 			</div>
 		</div>
 		<div class="row voffset-md">
@@ -717,7 +784,7 @@
 			<div class="col-md-3 col-sm-6">
 			</div>
 			<div class="col-md-3 col-sm-6">
-				<a href="http://www.thebinary.org"><img src="img/IO_Logo_Footer_v3.png" class="img-fluid mx-auto d-block img-bloc-footer-style" alt="www.thebinary.org" /></a>
+				<a href="http://www.thebinary.org"><img src="img/lazyload-ph.png" data-src="img/IO_Logo_Footer_v3.png" class="img-fluid mx-auto d-block img-bloc-footer-style lazyload" alt="www.thebinary.org" /></a>
 			</div>
 		</div>
 	</div>
@@ -730,7 +797,7 @@
 
 
 <!-- Additional JS -->
-<script src="./js/all.js?6334"></script><!-- Additional JS END -->
+<script src="./js/all.js?9988"></script><!-- Additional JS END -->
 
 
 </body>

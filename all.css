@@ -1223,9 +1223,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Text colour styles */
 
-.tc-dark-jungle-green{
-	color:#181818!important;
-}
 .tc-white{
 	color:#FFFFFF!important;
 }
@@ -1247,7 +1244,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .tc-fuchsia-2{
 	color:#FF00FF!important;
 }
-.tc-dark-jungle-green-2{
+.tc-dark-jungle-green{
 	color:#220A3E!important;
 }
 .tc-davys-grey{
@@ -1365,6 +1362,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .bg-IO-ORG-v1{
 	background-image:url("https://cdn.thebinary.org/images/projects/IO_ORG_v1.jpg");
+}
+.bg-IO-MEDIAPODCASTS-v2-2x{
+	background-image:url("https://cdn.thebinary.org/images/projects/IO_MEDIAPODCASTS_v2@2x.jpg");
 }
 
 

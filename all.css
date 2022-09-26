@@ -1062,10 +1062,10 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .but-form:hover{
 	text-decoration:none;
-	font-size:13px;
 	font-family:"NotoSansMono-Regular";
 	font-weight:bold;
 	background-color:#FEFFFF;
+	font-size:11px;
 }
 .h4-menubar-style{
 	font-family:"NotoSerifDisplay-Regular";

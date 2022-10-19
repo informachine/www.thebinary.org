@@ -1343,6 +1343,10 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	.container-div-style{
 		height:64px;
 	}
+	.imgvg-el{
+		width:251px;
+		height:335px;
+	}
 	
 	/* MD Row Margin Offsets */
 	.voffset-clear-md{
@@ -1417,6 +1421,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	.img-io-logo-64--style{
 		width:123px;
 		height:55px;
+	}
+	.imgvg-el{
 	}
 	
 }

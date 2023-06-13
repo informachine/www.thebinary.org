@@ -1227,9 +1227,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .bg-IO-PROJ-PANOPTICON-2K-alignedright-v1{
 	background-image:url("https://cdn.thebinary.org/images/projects/IO_PROJ_PANOPTICON_2K_alignedright_v1.jpg");
 }
-.bg-20220812-KIDS-APPS-SPYING{
-	background-image:url("https://cdn.thebinary.org/images/articles/20220812_KIDS_APPS_SPYING.jpg");
-}
 .bg-IO-ORG-ABOUT-v1-2x{
 	background-image:url("https://cdn.thebinary.org/images/projects/IO_ORG_ABOUT_v1_2x.jpg");
 }
@@ -1250,6 +1247,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .bg-IO-MEDIAPODCASTS-v2-2x{
 	background-image:url("https://cdn.thebinary.org/images/projects/IO_MEDIAPODCASTS_v2@2x.jpg");
+}
+.bg-20230612-VOTING-GREEK-ELECTIONS-2023{
+	background-image:url("https://cdn.thebinary.org/images/articles/20230612_VOTING_GREEK_ELECTIONS_2023.jpg");
 }
 
 
